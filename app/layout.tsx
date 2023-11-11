@@ -10,7 +10,7 @@ import Header from "@/components/header";
 const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Matías — Personal Portfolio",
+  title: "Matías Roje — Personal Portfolio",
   description:
     "Matías is a full stack web developer graduated from Le Wagon Berlin",
 };
@@ -21,9 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="!scroll-smooth">
       <body
-        className={`${raleway.className} bg-gray-50 text-gray-950 h-[5000px] pt-28 sm:pt-36`}
+        className={`${raleway.className} bg-gray-50 pt-28 text-gray-950 sm:pt-36`}
       >
         <Header />
         {children}

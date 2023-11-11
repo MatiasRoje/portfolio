@@ -6,16 +6,17 @@ import Link from "next/link";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowDown,
   faArrowRight,
   faFileArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
-import { faCircleDown } from "@fortawesome/free-solid-svg-icons/faCircleDown";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 function Intro() {
   return (
-    <section className="mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0">
+    <section
+      className="mb-14 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
+      id="home"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
