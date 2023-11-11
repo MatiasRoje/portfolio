@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import clsx from "clsx";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -12,8 +13,11 @@ import {
   faMoon,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 function Header() {
+  const [activeSection, setActiveSection] = useState("Home");
+
   return (
     <header className="relative z-50">
       <motion.div
@@ -24,52 +28,108 @@ function Header() {
       <nav className="fixed left-1/2 top-[0.15rem] flex h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
         <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-gray-800 sm:w-[initial] sm:flex-nowrap sm:gap-8">
           <motion.li
-            className="relative flex h-3/4 items-center justify-center"
+            className="relative flex h-3/4 items-center justify-center pb-1"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
             <Link
               href="#home"
-              className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+              className={clsx(
+                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+              )}
+              onClick={() => setActiveSection("Home")}
             >
               <FontAwesomeIcon icon={faHome} style={{ fontSize: 20 }} />
             </Link>
+            {"Home" === activeSection && (
+              <motion.span
+                className="absolute inset-0 -z-10 rounded-md border-b border-black/60"
+                layoutId="activeSection"
+                transition={{
+                  type: "spring",
+                  stiffness: 380,
+                  damping: 30,
+                }}
+              ></motion.span>
+            )}
           </motion.li>
           <motion.li
-            className="relative flex h-3/4 items-center justify-center"
+            className="relative flex h-3/4 items-center justify-center pb-1"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
             <Link
               href="#about"
-              className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+              className={clsx(
+                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+              )}
+              onClick={() => setActiveSection("About")}
             >
               <FontAwesomeIcon icon={faUser} style={{ fontSize: 20 }} />
             </Link>
+            {"About" === activeSection && (
+              <motion.span
+                className="absolute inset-0 -z-10 rounded-md border-b border-black/60"
+                layoutId="activeSection"
+                transition={{
+                  type: "spring",
+                  stiffness: 380,
+                  damping: 30,
+                }}
+              ></motion.span>
+            )}
           </motion.li>
           <motion.li
-            className="relative flex h-3/4 items-center justify-center"
+            className="relative flex h-3/4 items-center justify-center pb-1"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
             <Link
               href="#skills"
-              className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+              className={clsx(
+                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+              )}
+              onClick={() => setActiveSection("Skills")}
             >
               <FontAwesomeIcon icon={faLightbulb} style={{ fontSize: 20 }} />
             </Link>
+            {"Skills" === activeSection && (
+              <motion.span
+                className="absolute inset-0 -z-10 rounded-md border-b border-black/60"
+                layoutId="activeSection"
+                transition={{
+                  type: "spring",
+                  stiffness: 380,
+                  damping: 30,
+                }}
+              ></motion.span>
+            )}
           </motion.li>
           <motion.li
-            className="relative flex h-3/4 items-center justify-center"
+            className="relative flex h-3/4 items-center justify-center pb-1"
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
             <Link
               href="#projects"
-              className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+              className={clsx(
+                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+              )}
+              onClick={() => setActiveSection("Projects")}
             >
               <FontAwesomeIcon icon={faLaptop} style={{ fontSize: 20 }} />
             </Link>
+            {"Projects" === activeSection && (
+              <motion.span
+                className="absolute inset-0 -z-10 rounded-md border-b border-black/60"
+                layoutId="activeSection"
+                transition={{
+                  type: "spring",
+                  stiffness: 380,
+                  damping: 30,
+                }}
+              ></motion.span>
+            )}
           </motion.li>
           <motion.li
             className="relative flex h-3/4 items-center justify-center"
