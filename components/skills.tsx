@@ -4,6 +4,7 @@ import Image from "next/image";
 import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { motion } from "framer-motion";
+import { useSectionInView } from "@/lib/hooks";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -20,10 +21,13 @@ const fadeInAnimationVariants = {
 };
 
 function Skills() {
+  const { ref } = useSectionInView("Skills");
+
   return (
     <section
       className="mb-14 max-w-full scroll-mt-28 sm:mb-40 sm:max-w-[36rem]"
       id="skills"
+      ref={ref}
     >
       <SectionHeading>My skills</SectionHeading>
       <ul className="flex flex-wrap items-center justify-center gap-2">

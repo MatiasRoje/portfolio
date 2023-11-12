@@ -13,10 +13,11 @@ import {
   faMoon,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 function Header() {
-  const [activeSection, setActiveSection] = useState("Home");
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   return (
     <header className="relative z-50">
@@ -26,7 +27,7 @@ function Header() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
       <nav className="fixed left-1/2 top-[0.15rem] flex h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-gray-800 sm:w-[initial] sm:flex-nowrap sm:gap-8">
+        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-blue-600 sm:w-[initial] sm:flex-nowrap sm:gap-8">
           <motion.li
             className="relative flex h-3/4 items-center justify-center pb-1"
             initial={{ y: -100, opacity: 0 }}
@@ -35,15 +36,18 @@ function Header() {
             <Link
               href="#home"
               className={clsx(
-                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 hover:text-blue-700 focus:scale-110"
               )}
-              onClick={() => setActiveSection("Home")}
+              onClick={() => {
+                setTimeOfLastClick(Date.now());
+                setActiveSection("Home");
+              }}
             >
               <FontAwesomeIcon icon={faHome} style={{ fontSize: 20 }} />
             </Link>
             {"Home" === activeSection && (
               <motion.span
-                className="absolute inset-0 -z-10 rounded-md border-b border-black/60"
+                className="absolute inset-0 -z-10 rounded-md border-b border-blue-600/60"
                 layoutId="activeSection"
                 transition={{
                   type: "spring",
@@ -61,15 +65,18 @@ function Header() {
             <Link
               href="#about"
               className={clsx(
-                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 hover:text-blue-700 focus:scale-110"
               )}
-              onClick={() => setActiveSection("About")}
+              onClick={() => {
+                setTimeOfLastClick(Date.now());
+                setActiveSection("About");
+              }}
             >
               <FontAwesomeIcon icon={faUser} style={{ fontSize: 20 }} />
             </Link>
             {"About" === activeSection && (
               <motion.span
-                className="absolute inset-0 -z-10 rounded-md border-b border-black/60"
+                className="absolute inset-0 -z-10 rounded-md border-b border-blue-600/60"
                 layoutId="activeSection"
                 transition={{
                   type: "spring",
@@ -87,15 +94,18 @@ function Header() {
             <Link
               href="#skills"
               className={clsx(
-                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 hover:text-blue-700 focus:scale-110"
               )}
-              onClick={() => setActiveSection("Skills")}
+              onClick={() => {
+                setTimeOfLastClick(Date.now());
+                setActiveSection("Skills");
+              }}
             >
               <FontAwesomeIcon icon={faLightbulb} style={{ fontSize: 20 }} />
             </Link>
             {"Skills" === activeSection && (
               <motion.span
-                className="absolute inset-0 -z-10 rounded-md border-b border-black/60"
+                className="absolute inset-0 -z-10 rounded-md border-b border-blue-600/60"
                 layoutId="activeSection"
                 transition={{
                   type: "spring",
@@ -113,15 +123,18 @@ function Header() {
             <Link
               href="#projects"
               className={clsx(
-                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 hover:text-blue-700 focus:scale-110"
               )}
-              onClick={() => setActiveSection("Projects")}
+              onClick={() => {
+                setTimeOfLastClick(Date.now());
+                setActiveSection("Projects");
+              }}
             >
               <FontAwesomeIcon icon={faLaptop} style={{ fontSize: 20 }} />
             </Link>
             {"Projects" === activeSection && (
               <motion.span
-                className="absolute inset-0 -z-10 rounded-md border-b border-black/60"
+                className="absolute inset-0 -z-10 rounded-md border-b border-blue-600/60"
                 layoutId="activeSection"
                 transition={{
                   type: "spring",
@@ -138,7 +151,7 @@ function Header() {
           >
             <Link
               href="#contact"
-              className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+              className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 hover:text-blue-700 focus:scale-110"
             >
               <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: 20 }} />
             </Link>

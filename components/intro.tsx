@@ -10,12 +10,16 @@ import {
   faFileArrowDown,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { useSectionInView } from "@/lib/hooks";
 
 function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+
   return (
     <section
       className="mb-14 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
       id="home"
+      ref={ref}
     >
       <div className="flex items-center justify-center">
         <div className="relative">
@@ -76,7 +80,7 @@ function Intro() {
       >
         <Link
           href="#contact"
-          className="group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
+          className="group flex items-center gap-2 rounded-full bg-blue-600 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-blue-700 focus:scale-110 active:scale-105"
         >
           Contact me{" "}
           <FontAwesomeIcon

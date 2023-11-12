@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import ActiveSectionContextProvider from "@/context/active-section-context";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -25,8 +26,10 @@ export default function RootLayout({
       <body
         className={`${raleway.className} bg-gray-50 pt-28 text-gray-950 sm:pt-36`}
       >
-        <Header />
-        {children}
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+        </ActiveSectionContextProvider>
       </body>
     </html>
   );
