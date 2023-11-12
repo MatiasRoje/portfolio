@@ -11,9 +11,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -58,7 +60,7 @@ function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-justify text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-12 mt-10 px-4 text-justify text-2xl font-medium !leading-[1.5] sm:text-3xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -81,6 +83,10 @@ function Intro() {
         <Link
           href="#contact"
           className="group flex items-center gap-2 rounded-full bg-blue-600 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-blue-700 focus:scale-110 active:scale-105"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me{" "}
           <FontAwesomeIcon
@@ -91,7 +97,7 @@ function Intro() {
         </Link>
 
         <a
-          className="group flex cursor-pointer items-center gap-2 rounded-full border border-black/5 bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
           href="/CV.pdf"
           download
         >
@@ -104,7 +110,7 @@ function Intro() {
         </a>
         <div className="flex gap-3">
           <a
-            className="flex cursor-pointer items-center gap-2 rounded-full border border-black/5 bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+            className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
             href="https://www.linkedin.com/in/mat%C3%ADas-roje-carrasco-2a2673273/"
             target="_blank"
           >
@@ -112,7 +118,7 @@ function Intro() {
           </a>
 
           <a
-            className="flex cursor-pointer items-center gap-2 rounded-full border border-black/5 bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+            className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
             href="https://github.com/MatiasRoje"
             target="_blank"
           >

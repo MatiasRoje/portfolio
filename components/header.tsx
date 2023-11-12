@@ -151,10 +151,27 @@ function Header() {
           >
             <Link
               href="#contact"
-              className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 hover:text-blue-700 focus:scale-110"
+              className={clsx(
+                "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 hover:text-blue-700 focus:scale-110"
+              )}
+              onClick={() => {
+                setTimeOfLastClick(Date.now());
+                setActiveSection("Contact");
+              }}
             >
               <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: 20 }} />
             </Link>
+            {"Contact" === activeSection && (
+              <motion.span
+                className="absolute inset-0 -z-10 rounded-md border-b border-blue-600/60"
+                layoutId="activeSection"
+                transition={{
+                  type: "spring",
+                  stiffness: 380,
+                  damping: 30,
+                }}
+              ></motion.span>
+            )}
           </motion.li>
           <motion.li
             className="relative flex h-3/4 items-center justify-center"

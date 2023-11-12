@@ -35,7 +35,7 @@ function Project({
       }}
       className="group mb-3 last:mb-0 sm:mb-8"
     >
-      <section className="hover: group relative mb-3 max-w-[50rem] overflow-hidden rounded-lg border border-black/5 bg-gray-100 last:mb-0 sm:mb-8 sm:max-h-max sm:pr-8">
+      <section className="group relative mb-3 max-w-[50rem] overflow-hidden rounded-lg border border-black/5 bg-gray-100 last:mb-0 sm:mb-8 sm:max-h-max sm:pr-8">
         <div className="flex h-full flex-col px-5 pb-8 pt-4 sm:max-w-[40%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-auto">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 text-justify leading-relaxed text-gray-700">
