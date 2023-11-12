@@ -19,7 +19,7 @@ function Intro() {
 
   return (
     <section
-      className="mb-14 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
+      className="mb-16 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0"
       id="home"
       ref={ref}
     >

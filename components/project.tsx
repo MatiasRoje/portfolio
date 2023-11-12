@@ -53,7 +53,7 @@ function Project({
           </ul>
           <div className="mt-4 flex items-center justify-center gap-3 sm:mt-6">
             <a
-              className="flex cursor-pointer items-center gap-2 rounded-lg p-4 outline-none transition hover:scale-[1.15] hover:text-blue-950 focus:scale-[1.15] active:scale-105"
+              className="flex cursor-pointer items-center gap-2 rounded-lg p-4 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
               href={liveUrl}
               target="_blank"
             >

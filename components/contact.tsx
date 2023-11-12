@@ -14,7 +14,7 @@ function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-14 w-[min(100%,38rem)] scroll-mt-28 text-center sm:mb-28"
+      className="mb-20 w-[min(100%,38rem)] text-center sm:mb-28 sm:scroll-mt-28"
       initial={{
         opacity: 0,
       }}
@@ -51,7 +51,7 @@ function Contact() {
         }}
       >
         <input
-          className="borderBlack h-14 rounded-lg px-4 transition-all"
+          className="borderBlack h-14 rounded-lg px-4 transition-all focus:outline-none focus:ring focus:ring-blue-500"
           name="senderEmail"
           type="email"
           required
@@ -59,7 +59,7 @@ function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="borderBlack my-3 h-52 rounded-lg p-4 transition-all"
+          className="borderBlack my-3 h-52 rounded-lg p-4 transition-all focus:outline-none focus:ring focus:ring-blue-500"
           name="message"
           placeholder="Your message"
           required

@@ -178,12 +178,9 @@ function Header() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
           >
-            <Link
-              href="#"
-              className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
-            >
+            <button className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110">
               <FontAwesomeIcon icon={faMoon} style={{ fontSize: 20 }} />
-            </Link>
+            </button>
           </motion.li>
         </ul>
       </nav>
