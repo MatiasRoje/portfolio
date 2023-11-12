@@ -5,6 +5,7 @@ import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import { useTheme } from "@/context/theme-context";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -22,6 +23,7 @@ const fadeInAnimationVariants = {
 
 function Skills() {
   const { ref } = useSectionInView("Skills");
+  const { theme } = useTheme();
 
   return (
     <section
@@ -43,7 +45,9 @@ function Skills() {
             custom={index}
           >
             <Image
-              src={`https://skillicons.dev/icons?i=${skill}&theme=dark`}
+              src={`https://skillicons.dev/icons?i=${skill}&theme=${
+                theme === "light" ? "dark" : "light"
+              }`}
               alt={`${skill} icon`}
               width={48}
               height={48}

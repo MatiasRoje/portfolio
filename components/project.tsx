@@ -35,16 +35,16 @@ function Project({
       }}
       className="group mb-3 last:mb-0 sm:mb-8"
     >
-      <section className="group relative mb-3 max-w-[50rem] overflow-hidden rounded-lg border border-black/5 bg-gray-100 last:mb-0 sm:mb-8 sm:max-h-max sm:pr-8">
+      <section className="group relative mb-3 max-w-[50rem] overflow-hidden rounded-lg border border-black/5 bg-gray-100 last:mb-0 dark:bg-gray-700 sm:mb-8 sm:max-h-max sm:pr-8">
         <div className="flex h-full flex-col px-5 pb-8 pt-4 sm:max-w-[40%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-auto">
           <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 text-justify leading-relaxed text-gray-700">
+          <p className="mt-2 text-justify leading-relaxed text-gray-700 dark:text-gray-200">
             {description}
           </p>
           <ul className="mt-4 flex flex-wrap gap-2 sm:mt-6">
             {tags.map((tag, index) => (
               <li
-                className="rounded-full bg-blue-500/[0.85] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white "
+                className="rounded-full bg-blue-500/[0.85] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-gray-50"
                 key={index}
               >
                 {tag}
@@ -53,7 +53,7 @@ function Project({
           </ul>
           <div className="mt-4 flex items-center justify-center gap-3 sm:mt-6">
             <a
-              className="flex cursor-pointer items-center gap-2 rounded-lg p-4 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+              className="flex cursor-pointer items-center gap-2 rounded-lg p-4 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:hover:text-gray-100"
               href={liveUrl}
               target="_blank"
             >
@@ -64,7 +64,7 @@ function Project({
             </a>
 
             <a
-              className="flex cursor-pointer items-center gap-2 rounded-lg p-4 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+              className="flex cursor-pointer items-center gap-2 rounded-lg p-4 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:hover:text-gray-100"
               href={githubUrl}
               target="_blank"
             >

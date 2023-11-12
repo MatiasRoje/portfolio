@@ -1,12 +1,23 @@
 "use client";
 
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import { useTheme } from "@/context/theme-context";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ThemeSwitch() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
-    <button className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110">
-      <FontAwesomeIcon icon={faMoon} style={{ fontSize: 20 }} />
+    <button
+      className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+      onClick={toggleTheme}
+    >
+      {theme === "light" ? (
+        <FontAwesomeIcon icon={faMoon} style={{ fontSize: 20 }} />
+      ) : (
+        <FontAwesomeIcon icon={faSun} style={{ fontSize: 20 }} />
+      )}
     </button>
   );
 }

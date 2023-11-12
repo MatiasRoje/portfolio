@@ -82,7 +82,7 @@ function Intro() {
       >
         <Link
           href="#contact"
-          className="group flex items-center gap-2 rounded-full bg-blue-600 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-blue-700 focus:scale-110 active:scale-105"
+          className="group flex items-center gap-2 rounded-full bg-blue-600 px-7 py-3 text-gray-50 outline-none transition hover:scale-110 hover:bg-blue-700 focus:scale-110 active:scale-105"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -97,7 +97,7 @@ function Intro() {
         </Link>
 
         <a
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105"
+          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-gray-700"
           href="/CV.pdf"
           download
         >
@@ -110,7 +110,7 @@ function Intro() {
         </a>
         <div className="flex gap-3">
           <a
-            className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+            className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-gray-700 dark:text-gray-300"
             href="https://www.linkedin.com/in/mat%C3%ADas-roje-carrasco-2a2673273/"
             target="_blank"
           >
@@ -118,7 +118,7 @@ function Intro() {
           </a>
 
           <a
-            className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
+            className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-gray-700 dark:text-gray-300"
             href="https://github.com/MatiasRoje"
             target="_blank"
           >
