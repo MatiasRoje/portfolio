@@ -10,7 +10,7 @@ function ThemeSwitch() {
 
   return (
     <button
-      className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 focus:scale-110"
+      className="flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 hover:text-blue-700 focus:scale-110 dark:hover:text-white"
       onClick={toggleTheme}
     >
       {theme === "light" ? (
