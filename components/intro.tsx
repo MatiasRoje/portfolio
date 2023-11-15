@@ -126,24 +126,47 @@ function Intro() {
           />
         </Link>
 
-        <a
-          className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-gray-700"
-          href="/CV.pdf"
-          download
-        >
-          {language === "en" ? (
-            <>Download CV</>
-          ) : language === "de" ? (
-            <>CV herunterladen</>
-          ) : (
-            <>Descargar CV</>
-          )}{" "}
-          <FontAwesomeIcon
-            icon={faFileArrowDown}
-            style={{ fontSize: 18 }}
-            className="opacity-80 transition group-hover:translate-y-0.5"
-          />
-        </a>
+        {language === "en" ? (
+          <a
+            className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-gray-700"
+            href="/EN_CV.pdf"
+            download
+          >
+            Download CV{" "}
+            <FontAwesomeIcon
+              icon={faFileArrowDown}
+              style={{ fontSize: 18 }}
+              className="opacity-80 transition group-hover:translate-y-0.5"
+            />
+          </a>
+        ) : language === "de" ? (
+          <a
+            className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-gray-700"
+            href="/DE_CV.pdf"
+            download
+          >
+            CV herunterladen{" "}
+            <FontAwesomeIcon
+              icon={faFileArrowDown}
+              style={{ fontSize: 18 }}
+              className="opacity-80 transition group-hover:translate-y-0.5"
+            />
+          </a>
+        ) : (
+          <a
+            className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-gray-700"
+            href="/ES_CV.pdf"
+            download
+          >
+            Descargar CV{" "}
+            <FontAwesomeIcon
+              icon={faFileArrowDown}
+              style={{ fontSize: 18 }}
+              className="opacity-80 transition group-hover:translate-y-0.5"
+            />
+          </a>
+        )}
+
         <div className="flex gap-3">
           <a
             className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-gray-700 dark:text-gray-300"
