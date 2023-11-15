@@ -59,7 +59,7 @@ export const skillsData = [
   "redux",
   "ruby",
   "rails",
-  "mongodb	",
+  "mongodb",
   "postgres",
   "git",
   "github",
