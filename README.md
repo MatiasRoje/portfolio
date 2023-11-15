@@ -4,7 +4,7 @@ Welcome to my portfolio website! This project is a showcase of my skills and pro
 
 ## Demo
 
-Visit [My Portfolio](#https://mr-portfolio-site.vercel.app/) to see the live demo!
+Visit [My Portfolio](https://mr-portfolio-site.vercel.app/) to see the live demo!
 
 **Portfolio Screenshot:**
 
@@ -25,6 +25,7 @@ Visit [My Portfolio](#https://mr-portfolio-site.vercel.app/) to see the live dem
 
 - **Responsive Design**: Ensures a seamless experience across various devices.
 - **Animated Transitions**: Smooth page transitions powered by Framer Motion.
+- **Smooth Scrolling**: Enjoy a seamless scrolling experience, dynamically accessible through the navbar.
 - **Toast Notifications**: Real-time feedback with React Hot Toast.
 - **Email Integration**: Resend is utilized for the backend functionality, while React-Email handles the styling of emails sent through the contact form.
-- **TypeScript Support**: Improved code quality and developer experience.
+- **Context API for Themes and Languages**: The React Context API is employed for dynamically changing themes and languages.
