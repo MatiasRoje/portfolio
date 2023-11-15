@@ -1,9 +1,11 @@
+import { useLanguage } from "@/context/language-context";
 import React from "react";
 
 import { useFormStatus } from "react-dom";
 
 export function SubmitBtn() {
   const { pending } = useFormStatus();
+  const { language } = useLanguage();
 
   return (
     <button
@@ -13,8 +15,12 @@ export function SubmitBtn() {
     >
       {pending ? (
         <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
-      ) : (
+      ) : language === "en" ? (
         "Submit"
+      ) : language === "de" ? (
+        "Absenden"
+      ) : (
+        "Enviar"
       )}
     </button>
   );

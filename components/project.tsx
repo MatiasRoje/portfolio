@@ -1,5 +1,6 @@
 "use client";
 
+import { useLanguage } from "@/context/language-context";
 import { projectsData } from "@/lib/data";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
@@ -25,6 +26,7 @@ function Project({
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+  const { language } = useLanguage();
 
   return (
     <motion.div
@@ -39,7 +41,14 @@ function Project({
         <div className="flex h-full flex-col px-5 pb-8 pt-4 sm:max-w-[40%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-auto">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className="mt-2 text-justify leading-relaxed text-gray-700 dark:text-gray-200">
-            {description}
+            {" "}
+            {language === "en" ? (
+              <>{description.en}</>
+            ) : language === "de" ? (
+              <>{description.de}</>
+            ) : (
+              <>{description.es}</>
+            )}
           </p>
           <ul className="mt-4 flex flex-wrap gap-2 sm:mt-6">
             {tags.map((tag, index) => (
@@ -64,7 +73,7 @@ function Project({
             </a>
 
             <a
-              className="flex cursor-pointer items-center gap-2 rounded-lg p-4 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:hover:text-gray-100"
+              className="dark:hover:text-gray-10 flex cursor-pointer items-center gap-2 rounded-lg p-4 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105"
               href={githubUrl}
               target="_blank"
             >

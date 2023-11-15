@@ -1,21 +1,12 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FooterUserSection from "./footer-user-section";
 
 function Footer() {
   return (
     <footer className="flex w-full flex-col items-center bg-gray-900 px-4 py-16 dark:bg-gray-50">
       <div className="flex w-full max-w-[50rem] flex-col items-center justify-between gap-2 text-gray-50 dark:text-gray-900 sm:flex-row">
-        <p className="font-semibold sm:text-base">
-          © 2023 by{" "}
-          <a
-            href="https://github.com/MatiasRoje"
-            target="_blank"
-            className="hover:underline"
-          >
-            Matías Roje
-          </a>
-          . All rights reserved.
-        </p>
+        <FooterUserSection />
         <div className="flex">
           {" "}
           <a

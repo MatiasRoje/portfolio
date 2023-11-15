@@ -15,6 +15,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import ThemeSwitch from "./theme-switch";
+import LanguageSwitch from "./language-switch";
 
 function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -23,7 +24,7 @@ function Header() {
   return (
     <header className="relative z-50">
       <motion.div
-        className="fixed left-1/2 top-0 h-12 w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:border-black/40 dark:bg-blue-600 dark:bg-opacity-80 sm:top-6 sm:h-[3.25rem] sm:w-[32rem] sm:rounded-full"
+        className="fixed left-1/2 top-0 h-12 w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] dark:border-black/40 dark:bg-blue-600 dark:bg-opacity-80 sm:top-6 sm:h-[3.25rem] sm:w-[34rem] sm:rounded-full"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
@@ -151,7 +152,7 @@ function Header() {
             animate={{ y: 0, opacity: 1 }}
           >
             <Link
-              href="#contact"
+              href="/#contact"
               className={clsx(
                 "flex w-full items-center justify-center px-3 py-3 outline-none transition hover:scale-110 hover:text-blue-700 focus:scale-110 dark:hover:text-white"
               )}
@@ -180,6 +181,13 @@ function Header() {
             animate={{ y: 0, opacity: 1 }}
           >
             <ThemeSwitch />
+          </motion.li>
+          <motion.li
+            className="relative flex h-3/4 items-center justify-center"
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            <LanguageSwitch />
           </motion.li>
         </ul>
       </nav>

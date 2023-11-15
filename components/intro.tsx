@@ -12,10 +12,12 @@ import {
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import { useLanguage } from "@/context/language-context";
 
 function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const { language } = useLanguage();
 
   return (
     <section
@@ -64,12 +66,34 @@ function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Hello, I&apos;m <span className="font-bold">Matías Roje.</span> I&apos;m
-        a <span className="font-bold">Full-Stack Developer</span> with focus in{" "}
-        <span className="font-bold">React </span>
-        <span className="italic">(Next.js, TypeScrypt, Node.js)</span> and
-        additional expertise in <span className="italic">Ruby</span> and
-        <span className="italic"> Ruby on Rails</span>.
+        {language === "en" ? (
+          <>
+            Hello, I&apos;m <span className="font-bold">Matías Roje.</span>{" "}
+            I&apos;m a <span className="font-bold">Full-Stack Developer</span>{" "}
+            with focus in <span className="font-bold">React </span>
+            <span className="italic">(Next.js, TypeScrypt, Node.js)</span> and
+            additional expertise in <span className="italic">Ruby</span> and
+            <span className="italic"> Ruby on Rails</span>.
+          </>
+        ) : language === "de" ? (
+          <>
+            Hallo, ich bin <span className="font-bold">Matías Roje</span>. Ich
+            bin ein <span className="font-bold">Full-Stack-Entwickler</span> mit
+            Fokus auf <span className="font-bold">React </span>
+            <span className="italic">(Next.js, TypeScript, Node.js)</span> und
+            zusätzlicher Expertise in <span className="italic">Ruby</span> und{" "}
+            <span className="italic">Ruby on Rails</span>.
+          </>
+        ) : (
+          <>
+            Hola, soy <span className="font-bold">Matías Roje</span>. Soy un{" "}
+            <span className="font-bold">desarrollador Full-Stack</span> con
+            enfoque en <span className="font-bold">React </span>
+            <span className="italic">(Next.js, TypeScript, Node.js)</span> y
+            experiencia adicional en <span className="italic">Ruby</span> y{" "}
+            <span className="italic">Ruby on Rails</span>.
+          </>
+        )}
       </motion.h1>
 
       <motion.div
@@ -88,7 +112,13 @@ function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me{" "}
+          {language === "en" ? (
+            <>Contact me</>
+          ) : language === "de" ? (
+            <>Kontaktiere mich</>
+          ) : (
+            <>Contáctame</>
+          )}{" "}
           <FontAwesomeIcon
             icon={faArrowRight}
             style={{ fontSize: 18 }}
@@ -101,7 +131,13 @@ function Intro() {
           href="/CV.pdf"
           download
         >
-          Download CV{" "}
+          {language === "en" ? (
+            <>Download CV</>
+          ) : language === "de" ? (
+            <>CV herunterladen</>
+          ) : (
+            <>Descargar CV</>
+          )}{" "}
           <FontAwesomeIcon
             icon={faFileArrowDown}
             style={{ fontSize: 18 }}

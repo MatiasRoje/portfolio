@@ -6,6 +6,7 @@ import { skillsData } from "@/lib/data";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { useTheme } from "@/context/theme-context";
+import { useLanguage } from "@/context/language-context";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -24,6 +25,7 @@ const fadeInAnimationVariants = {
 function Skills() {
   const { ref } = useSectionInView("Skills");
   const { theme } = useTheme();
+  const { language } = useLanguage();
 
   return (
     <section
@@ -31,7 +33,16 @@ function Skills() {
       id="skills"
       ref={ref}
     >
-      <SectionHeading>My skills</SectionHeading>
+      <SectionHeading>
+        {" "}
+        {language === "en" ? (
+          <>My skills</>
+        ) : language === "de" ? (
+          <>Meine Fähigkeiten</>
+        ) : (
+          <>Mis habilidades</>
+        )}
+      </SectionHeading>
       <ul className="flex flex-wrap items-center justify-center gap-2">
         {skillsData.map((skill, index) => (
           <motion.li

@@ -6,9 +6,11 @@ import SubmitBtn from "./submit-btn";
 import { motion } from "framer-motion";
 import { sendEmail } from "@/actions/sendEmail";
 import toast from "react-hot-toast";
+import { useLanguage } from "@/context/language-context";
 
 function Contact() {
   const { ref } = useSectionInView("Contact");
+  const { language } = useLanguage();
 
   return (
     <motion.section
@@ -28,13 +30,41 @@ function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>Contact me</SectionHeading>
+      <SectionHeading>
+        {language === "en" ? (
+          <>Contact me</>
+        ) : language === "de" ? (
+          <>Kontakt</>
+        ) : (
+          <>Contacto</>
+        )}
+      </SectionHeading>
       <p className="-mt-6 text-gray-700 dark:text-gray-200">
-        Please contact me directly at{" "}
-        <a className="underline" href="mailto:rojechi@gmail.com">
-          rojechi@gmail.com
-        </a>{" "}
-        or through this form.
+        {language === "en" ? (
+          <>
+            Please contact me directly at{" "}
+            <a className="underline" href="mailto:rojechi@gmail.com">
+              rojechi@gmail.com
+            </a>{" "}
+            or through this form.
+          </>
+        ) : language === "de" ? (
+          <>
+            Bitte kontaktiere mich direkt unter{" "}
+            <a className="underline" href="mailto:rojechi@gmail.com">
+              rojechi@gmail.com
+            </a>{" "}
+            oder über dieses Formular.
+          </>
+        ) : (
+          <>
+            Puedes contactarme directamente en{" "}
+            <a className="underline" href="mailto:rojechi@gmail.com">
+              rojechi@gmail.com
+            </a>{" "}
+            o a través de este formulario.
+          </>
+        )}
       </p>
 
       <form
@@ -51,17 +81,29 @@ function Contact() {
         }}
       >
         <input
-          className="borderBlack h-14 rounded-lg px-4 transition-all focus:outline-none focus:ring focus:ring-blue-500"
+          className="borderBlack h-14 rounded-lg px-4 transition-all focus:outline-none focus:ring focus:ring-blue-500 dark:text-gray-900"
           name="senderEmail"
           type="email"
           required
           maxLength={500}
-          placeholder="Your email"
+          placeholder={
+            language === "en"
+              ? "Your email"
+              : language === "de"
+              ? "Deine E-mail"
+              : "Tu email"
+          }
         />
         <textarea
-          className="borderBlack my-3 h-52 rounded-lg p-4 transition-all focus:outline-none focus:ring focus:ring-blue-500"
+          className="borderBlack my-3 h-52 rounded-lg p-4 transition-all focus:outline-none focus:ring focus:ring-blue-500 dark:text-gray-900"
           name="message"
-          placeholder="Your message"
+          placeholder={
+            language === "en"
+              ? "Your message"
+              : language === "de"
+              ? "Deine Nachricht"
+              : "Tu mensaje"
+          }
           required
           maxLength={5000}
         />
