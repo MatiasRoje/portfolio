@@ -170,7 +170,7 @@ function Intro() {
         <div className="flex gap-3">
           <a
             className="borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 outline-none transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-gray-700 dark:text-gray-300"
-            href="https://www.linkedin.com/in/mat%C3%ADas-roje-carrasco-2a2673273/"
+            href="https://www.linkedin.com/in/matias-roje-carrasco/"
             target="_blank"
           >
             <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: 20 }} />
