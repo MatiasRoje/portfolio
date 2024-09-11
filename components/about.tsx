@@ -160,7 +160,7 @@ export function About() {
             I&apos;m now seeking a{" "}
             <span className="font-bold">full-time position</span> as a{" "}
             <span className="font-bold">DevOps Engineer</span> or{" "}
-            <span className="font-bold">Software Developer</span> , eager to
+            <span className="font-bold">Software Developer</span>, eager to
             apply my skills and continue learning in a dynamic team.
           </>
         ) : language === "de" ? (

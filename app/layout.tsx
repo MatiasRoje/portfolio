@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${raleway.className} bg-gray-50 pt-28 text-gray-950 dark:bg-gray-900 dark:text-gray-100 sm:pt-36`}
+        className={`${raleway.className} hyphens-auto bg-gray-50 pt-28 text-gray-950 dark:bg-gray-900 dark:text-gray-100 sm:pt-36`}
       >
         <ThemeContextProvider>
           <LanguageContextProvider>

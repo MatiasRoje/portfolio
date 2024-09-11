@@ -39,7 +39,7 @@ function Contact() {
           <>Contacto</>
         )}
       </SectionHeading>
-      <p className="-mt-6 text-gray-700 dark:text-gray-200">
+      <p className="-mt-6 hyphens-none text-gray-700 dark:text-gray-200">
         {language === "en" ? (
           <>
             Please contact me directly at{" "}

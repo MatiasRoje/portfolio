@@ -20,7 +20,7 @@ function Projects() {
         ) : language === "de" ? (
           <>Projekte</>
         ) : (
-          <>Projectos</>
+          <>Proyectos</>
         )}
       </SectionHeading>
       <div>

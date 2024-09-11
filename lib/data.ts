@@ -6,9 +6,9 @@ export const projectsData = [
   {
     title: "Spring-Petclinic-DevOps",
     description: {
-      en: "This project focuses on building a modern CI/CD pipeline and deploying the application entirely in the cloud using AWS and Kubernetes, as part of the DST Bootcamp.",
-      de: "Dieses Projekt konzentriert sich darauf, eine moderne CI/CD-Pipeline zu erstellen und die Anwendung vollständig in der Cloud mithilfe von AWS und Kubernetes bereitzustellen, als Teil des DST Bootcamps.",
-      es: "Este proyecto se centra en la creación de un proceso CI/CD moderno y en el despliegue completo de la aplicación en la nube utilizando AWS y Kubernetes, como parte del Bootcamp de DST.",
+      en: "The project focuses on implementing a CI/CD pipeline using Jenkins and ArgoCD, which hosts our application on a Kubernetes cluster in AWS EKS, as part of the DST Bootcamp.",
+      de: "Das Projekt konzentriert sich auf die Implementierung einer CI/CD-Pipeline mithilfe von Jenkins und ArgoCD, die unsere Anwendung auf einem Kubernetes-Cluster in AWS EKS hostet, im Rahmen des DST Bootcamps.",
+      es: "El proyecto se centra en la implementación de una pipeline CI/CD utilizando Jenkins y ArgoCD, que aloja nuestra aplicación en un clúster de Kubernetes en AWS EKS, como parte del Bootcamp en DST.",
     },
     tags: [
       "AWS",
@@ -28,7 +28,7 @@ export const projectsData = [
     description: {
       en: "Movie database website where users can explore and discover information about movies in an attractive way, as well as write reviews, rate movies, and add them to their watchlist.",
       de: "Film-Datenbank-Website, auf der Benutzer Informationen über Filme auf attraktive Weise erkunden und entdecken können. Außerdem können sie Bewertungen schreiben, Filme bewerten und sie ihrer Watchlist hinzufügen.",
-      es: "Base de datos de películas donde los usuarios pueden explorar y descubrir información sobre películas de una manera atractiva, así como escribir reseñas, calificar películas y agregarlas a su lista de películas por ver.",
+      es: "Base de datos donde los usuarios pueden explorar y descubrir información sobre películas de una manera atractiva, así como escribir reseñas, calificar películas y agregarlas a su lista por ver.",
     },
     tags: [
       "TypeScript",
