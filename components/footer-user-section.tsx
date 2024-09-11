@@ -9,7 +9,7 @@ function FooterUserSection() {
     <p className="font-semibold sm:text-base">
       {language === "en" ? (
         <>
-          © 2023 by{" "}
+          © 2024 by{" "}
           <a
             href="https://github.com/MatiasRoje"
             target="_blank"
@@ -21,7 +21,7 @@ function FooterUserSection() {
         </>
       ) : language === "de" ? (
         <>
-          © 2023 von{" "}
+          © 2024 von{" "}
           <a
             href="https://github.com/MatiasRoje"
             target="_blank"
@@ -33,7 +33,7 @@ function FooterUserSection() {
         </>
       ) : (
         <>
-          © 2023 por{" "}
+          © 2024 por{" "}
           <a
             href="https://github.com/MatiasRoje"
             target="_blank"

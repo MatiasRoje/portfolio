@@ -69,29 +69,45 @@ function Intro() {
         {language === "en" ? (
           <>
             Hello, I&apos;m <span className="font-bold">Matías Roje.</span>{" "}
-            I&apos;m a <span className="font-bold">Full-Stack Developer</span>{" "}
-            with focus in <span className="font-bold">React </span>
-            <span className="italic">(Next.js, TypeScrypt, Node.js)</span> and
-            additional expertise in <span className="italic">Ruby</span> and
-            <span className="italic"> Ruby on Rails</span>.
+            I&apos;m a <span className="font-bold">DevOps Engineer</span> with a
+            strong foundation in{" "}
+            <span className="italic">Software Development</span> and deep
+            expertise in <span className="font-bold">AWS</span>,{" "}
+            <span className="font-bold">Infrastructure as Code (IaC)</span>,{" "}
+            <span className="font-bold">Kubernetes</span>, and{" "}
+            <span className="font-bold">CI/CD pipelines</span>. I bring a
+            comprehensive understanding of the entire software lifecycle, from{" "}
+            <span className="italic">coding</span> to{" "}
+            <span className="italic">cloud deployment</span>. Nice to meet you!
           </>
         ) : language === "de" ? (
           <>
-            Hallo, ich bin <span className="font-bold">Matías Roje</span>. Ich
-            bin ein <span className="font-bold">Full-Stack-Entwickler</span> mit
-            Fokus auf <span className="font-bold">React </span>
-            <span className="italic">(Next.js, TypeScript, Node.js)</span> und
-            zusätzlicher Expertise in <span className="italic">Ruby</span> und{" "}
-            <span className="italic">Ruby on Rails</span>.
+            Hallo, ich bin <span className="font-bold">Matías Roje.</span> Ich
+            bin ein <span className="font-bold">DevOps Engineer</span> mit
+            tiefen Kenntnissen in der{" "}
+            <span className="italic">Softwareentwicklung</span> und Expertise in{" "}
+            <span className="font-bold">AWS</span>,{" "}
+            <span className="font-bold">Infrastructure as Code (IaC)</span>,{" "}
+            <span className="font-bold">Kubernetes</span> und{" "}
+            <span className="font-bold">CI/CD-Pipelines</span>. Ich bringe ein
+            umfassendes Verständnis des gesamten Software-Lebenszyklus mit, von{" "}
+            <span className="italic">Programmierung</span> bis hin zur{" "}
+            <span className="italic">Cloud-Bereitstellung</span>. Schön, Sie
+            kennenzulernen!
           </>
         ) : (
           <>
-            Hola, soy <span className="font-bold">Matías Roje</span>. Soy un{" "}
-            <span className="font-bold">desarrollador Full-Stack</span> con
-            enfoque en <span className="font-bold">React </span>
-            <span className="italic">(Next.js, TypeScript, Node.js)</span> y
-            experiencia adicional en <span className="italic">Ruby</span> y{" "}
-            <span className="italic">Ruby on Rails</span>.
+            Hola, soy <span className="font-bold">Matías Roje.</span> Soy un{" "}
+            <span className="font-bold">DevOps Engineer</span> con una sólida
+            base en <span className="italic">Desarrollo de Software</span> y una
+            profunda experiencia en <span className="font-bold">AWS</span>,{" "}
+            <span className="font-bold">Infrastructure as Code (IaC)</span>,{" "}
+            <span className="font-bold">Kubernetes</span> y{" "}
+            <span className="font-bold">pipelines CI/CD</span>. Tengo un
+            entendimiento completo del ciclo de vida del software, desde la{" "}
+            <span className="italic">programación</span> hasta el{" "}
+            <span className="italic">despliegue en la nube</span>. ¡Encantado de
+            conocerte!
           </>
         )}
       </motion.h1>
@@ -129,7 +145,7 @@ function Intro() {
         {language === "en" ? (
           <a
             className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-gray-700"
-            href="/EN_CV.pdf"
+            href="/EN-CV-DevOps.pdf"
             download
           >
             Download CV{" "}
@@ -142,7 +158,7 @@ function Intro() {
         ) : language === "de" ? (
           <a
             className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-gray-700"
-            href="/DE_CV.pdf"
+            href="/DE-CV-DevOps.pdf"
             download
           >
             CV herunterladen{" "}
@@ -155,7 +171,7 @@ function Intro() {
         ) : (
           <a
             className="borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-gray-700"
-            href="/ES_CV.pdf"
+            href="/ES-CV-DevOps.pdf"
             download
           >
             Descargar CV{" "}

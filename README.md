@@ -1,14 +1,14 @@
 # Matías Roje — Personal Portfolio
 
-Welcome to my portfolio website! This project is a showcase of my skills and projects, developed using Next.js, React, Tailwind CSS, Framer Motion, React Hot Toast, Resend, and React Email. The entire project is built with TypeScript for enhanced type safety.
+Welcome to my portfolio website! This project is a showcase of my skills and projects, developed using Next.js, React, Tailwind CSS, Framer Motion, React Hot Toast, Resend, and React Email. The entire project is built with TypeScript for enhanced type safety and can be toggle in multiple themes and languages.
 
 ## Demo
 
-Visit [My Portfolio](https://mr-portfolio-site.vercel.app/) to see the live demo!
+Visit [My Portfolio](https://www.matiasroje-devops.de/) to see the live demo!
 
 **Portfolio Screenshot:**
 
-![Portfolio Screenshot](public/mr-portfolio-screenshot.png)
+![Portfolio Screenshot](public/mr-portfolio-screenshot2.png)
 
 ## Technologies Used
 

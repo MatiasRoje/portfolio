@@ -1,7 +1,28 @@
 import filmfortressImg from "@/public/filmfortress.jpeg";
 import fakefriendsImg from "@/public/fakefriends.jpeg";
+import petclinicImg from "@/public/aws-petclinic.png";
 
 export const projectsData = [
+  {
+    title: "Spring-Petclinic-DevOps",
+    description: {
+      en: "This project focuses on building a modern CI/CD pipeline and deploying the application entirely in the cloud using AWS and Kubernetes, as part of the DST Bootcamp.",
+      de: "Dieses Projekt konzentriert sich darauf, eine moderne CI/CD-Pipeline zu erstellen und die Anwendung vollständig in der Cloud mithilfe von AWS und Kubernetes bereitzustellen, als Teil des DST Bootcamps.",
+      es: "Este proyecto se centra en la creación de un proceso CI/CD moderno y en el despliegue completo de la aplicación en la nube utilizando AWS y Kubernetes, como parte del Bootcamp de DST.",
+    },
+    tags: [
+      "AWS",
+      "Kubernetes",
+      "Terraform",
+      "Jenkins",
+      "ArgoCD",
+      "Prometheus",
+      "Grafana",
+    ],
+    imageUrl: petclinicImg,
+    githubUrl: "https://github.com/MatiasRoje/spring-petclinic-cloud",
+    liveUrl: "https://github.com/MatiasRoje/spring-petclinic-cloud",
+  },
   {
     title: "FilmFortress",
     description: {
@@ -45,28 +66,35 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "html",
-  "css",
-  "sass",
-  "tailwind",
-  "bootstrap",
+  "aws",
+  "kubernetes",
+  "docker",
+  "terraform",
+  "jenkins",
+  "github",
+  "gitlab",
+  "py",
+  "linux",
+  "ansible",
+  "prometheus",
+  "grafana",
   "js",
   "ts",
   "react",
   "nextjs",
   "nodejs",
-  "express",
-  "redux",
+  "jquery",
+  "html",
+  "css",
+  "sass",
+  "tailwind",
   "ruby",
   "rails",
-  "py",
-  "anaconda",
+  "php",
   "mysql",
   "mongodb",
   "postgres",
-  "jest",
   "postman",
   "git",
-  "github",
   "vscode",
 ] as const;

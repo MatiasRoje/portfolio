@@ -17,7 +17,7 @@ const raleway = Raleway({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Matías Roje — Personal Portfolio",
   description:
-    "Matías is a full stack web developer graduated from Le Wagon Berlin",
+    "Matías is a experienced Software Developer and DevOps Engineer graduated from Le Wagon Berlin and DST",
 };
 
 export default function RootLayout({
